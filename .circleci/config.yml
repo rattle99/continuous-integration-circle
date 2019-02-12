@@ -8,3 +8,15 @@ jobs:
     executor: ci-executor
     steps:
       - checkout
+
+      - run:
+          name: build dependencies
+          command: bundle install
+
+      - run:
+          name: build the jekyll site
+          command: REPLACE-ME-WITH-BUILD-COMMAND
+
+      - run:
+          name: notify build is finished
+          command: echo "The build is finished!"
